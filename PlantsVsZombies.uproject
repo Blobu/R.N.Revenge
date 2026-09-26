@@ -3,13 +3,20 @@
 	"EngineAssociation": "5.6",
 	"Category": "",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "PlantsVsZombies",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "ModelingToolsEditorMode",
-			"Enabled": true,
-			"TargetAllowList": [
-				"Editor"
-			]
+			"Enabled": true
 		},
 		{
 			"Name": "ElectraPlayer",
@@ -22,6 +29,13 @@
 		{
 			"Name": "VaRest",
 			"Enabled": true
+		},
+		{
+			"Name": "VisualStudioTools",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Win64"
+			]
 		}
 	],
 	"TargetPlatforms": [
