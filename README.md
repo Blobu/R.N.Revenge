@@ -15,10 +15,6 @@ This project is intentionally private and will not be published outside the grou
 
 This game is a personal learning project designed to help me become a better game developer. It serves as a playground for implementing complex game mechanics, AI balancing, and database management, while ensuring a small but trusted community that will provide honest feedback.
 
-## Core Gameplay Pillars
-
-Compared to classic tower-defense games, this project adds significant progression depth, diverse mechanics, and a competitive edge:
-
 ### 🌻 The Roster & Abilities
 - **Massive Character Pool:** Over **70** unique playable characters and various distinct enemy types.
 - **Dynamic Plant Abilities:** Build your deck using characters with specialized roles: *Long-range attacks, Close-range attacks, Tanks, Healers, Fire damage, Stun, Tick damage, Lane changing, Shield providers, Damage boosters, Critical hits, and Explosive Bombs.*
@@ -43,7 +39,7 @@ The game features a fully integrated backend system:
 ## Tech Snapshot
 
 - **Engine:** Unreal Engine 5.6
-- **Target Platform:** Windows & Android
+- **Target Platform:** Windows, Android, MAC, Linux
 - **Plugins Used:** `HttpBlueprint` (for API calls), `VaRest` (for JSON/REST backend communication)
 - **Backend:** Cloud Database integration for real-time saving and leaderboard fetching.
 
@@ -57,3 +53,6 @@ This repository contains personal content (faces, names, and school-specific ref
 ## Current State
 
 The project is almost complete gameplay-wise. Currently focusing on playtesting, balancing the late-game economy/waves, and overall user experience (UX) improvements.
+
+
+Fully human coded, no ai (besides the README)
