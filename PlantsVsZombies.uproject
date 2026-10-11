@@ -19,10 +19,6 @@
 			"Enabled": true
 		},
 		{
-			"Name": "ElectraPlayer",
-			"Enabled": true
-		},
-		{
 			"Name": "HttpBlueprint",
 			"Enabled": true
 		},
@@ -68,6 +64,14 @@
 		{
 			"Name": "GooglePAD",
 			"Enabled": false
+		},
+		{
+			"Name": "WebMMoviePlayer",
+			"Enabled": false
+		},
+		{
+			"Name": "ElectraPlayer",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
