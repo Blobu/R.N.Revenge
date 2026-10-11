@@ -51,8 +51,7 @@ This repository contains personal content (faces, names, and school-specific ref
 - Do not share media assets outside the friend group.
 
 ## Current State
-
-The project is almost complete gameplay-wise. Currently focusing on playtesting, balancing the late-game economy/waves, and overall user experience (UX) improvements.
+The project is finished
 
 
 Fully human coded, no ai (besides the README)
