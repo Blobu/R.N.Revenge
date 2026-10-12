@@ -16,21 +16,45 @@
     <h1>Radu Negru Revenge</h1>
     <p class="subtitle">Choose your platform to download the game and open its installation tutorial.</p>
     <div class="platforms">
-      <a class="platform-card" href="windows.html">
-        <div><strong>Windows</strong><span>Installation & guide</span></div><span aria-hidden="true">↗</span>
+      <a class="platform-card" href="windows.html" data-download="RaduNegruRevenge-Windows.rar">
+        <div><strong>Windows</strong><span>Download & guide</span></div><span aria-hidden="true">↗</span>
       </a>
-      <a class="platform-card" href="android.html">
-        <div><strong>Android</strong><span>Installation & guide</span></div><span aria-hidden="true">↗</span>
+      <a class="platform-card" href="android.html" data-download="Radu.Negru.Revenge.apk">
+        <div><strong>Android</strong><span>Download & guide</span></div><span aria-hidden="true">↗</span>
       </a>
-      <a class="platform-card" href="mac.html">
+      <a class="platform-card" href="mac.html" data-download="RaduNegruRevenge-Mac.zip">
         <div><strong>macOS</strong><p class="warning">Not recommended</p></div><span aria-hidden="true">↗</span>
       </a>
-      <a class="platform-card" href="linux.html">
-        <div><strong>Linux</strong><span>Installation & guide</span></div><span aria-hidden="true">↗</span>
+      <a class="platform-card" href="linux.html" data-download="RaduNegruRevenge-Linux.rar">
+        <div><strong>Linux</strong><span>Download & guide</span></div><span aria-hidden="true">↗</span>
       </a>
     </div>
     <footer>Made with ❤️ and a lot of breaks :)</footer>
   </main>
+  <script>
+    document.querySelectorAll("[data-download]").forEach(button => {
+      button.addEventListener("click", event => {
+        event.preventDefault();
+
+        const file = button.dataset.download;
+        const tutorial = button.href;
+
+        const url = "https://github.com/Blobu/R.N.Revenge/releases/latest/download/"
+          + encodeURIComponent(file);
+
+        // Open the installation tutorial in a new tab
+        const tab = window.open(tutorial, "_blank");
+
+        if (tab) {
+          // Start the download in the original tab
+          window.location.assign(url);
+        } else {
+          // If pop-ups are blocked, show the tutorial
+          window.location.assign(tutorial);
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

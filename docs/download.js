@@ -1,7 +1,7 @@
 // GitHub Release files. Change only if you rename an asset.
 const files = {
   windows: "RaduNegruRevenge-Windows.rar",
-  android: "Radu Negru Revenge.apk",
+  android: "Radu.Negru.Revenge.apk",
   mac: "RaduNegruRevenge-Mac.zip",
   linux: "RaduNegruRevenge-Linux.rar"
 };
