@@ -28,13 +28,6 @@ if (filename) {
     }
 
     // Attempt automatic download
-    const link = document.createElement("a");
-    link.href = downloadUrl;
-    link.download = filename;
-    link.style.display = "none";
-
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
+    window.location.assign(downloadUrl);
   });
 }
