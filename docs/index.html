@@ -1,47 +1,36 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Download My App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b10">
+  <title>Radu Negru Revenge · Download</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Thanks for downloading!</h1>
-  <p>Your download is starting automatically...</p>
-
-  <img src="preview.png" width="500"
-       alt="Application preview">
-
-  <p id="status">Preparing download...</p>
-  <a id="manual" href="#">Download manually</a>
-
-  <script>
-    const files = {
-      windows: "MyApp-Windows.exe",
-      linux: "MyApp-Linux.AppImage",
-      macos: "MyApp-macOS.dmg"
-    };
-
-    const os = new URLSearchParams(
-      window.location.search
-    ).get("os");
-
-    const file = files[os];
-
-    if (file) {
-      const url =
-        "https://github.com/Blobu/R.N.Revenge/releases/latest/download/"
-        + file;
-
-      document.getElementById("manual").href = url;
-      document.getElementById("status").textContent =
-        "Downloading " + file;
-
-      window.location.href = url;
-    } else {
-      document.getElementById("status").textContent =
-        "Please select a valid platform.";
-    }
-  </script>
+  <main>
+    <nav><a href="https://github.com/Blobu/R.N.Revenge/releases/latest">← GitHub release</a></nav>
+    <p class="eyebrow">Download / Install</p>
+    <h1>Radu Negru Revenge</h1>
+    <p class="subtitle">Choose your platform to download the game and open its installation tutorial.</p>
+    <div class="platforms">
+      <a class="platform-card" href="windows.html">
+        <div><strong>Windows</strong><span>Installation & guide</span></div><span aria-hidden="true">↗</span>
+      </a>
+      <a class="platform-card" href="android.html">
+        <div><strong>Android</strong><span>Installation & guide</span></div><span aria-hidden="true">↗</span>
+      </a>
+      <a class="platform-card" href="mac.html">
+        <div><strong>macOS</strong><p class="warning">Not recommended</p></div><span aria-hidden="true">↗</span>
+      </a>
+      <a class="platform-card" href="linux.html">
+        <div><strong>Linux</strong><span>Installation & guide</span></div><span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <footer>Made with ❤️ and a lot of breaks :)</footer>
+  </main>
 </body>
+
 </html>
