@@ -1,4 +1,4 @@
-// GitHub Release files. Change only if you rename an asset.
+
 const files = {
   windows: "RaduNegruRevenge-Windows.rar",
   android: "Radu.Negru.Revenge.apk",
@@ -8,18 +8,33 @@ const files = {
 
 const platform = document.body.dataset.platform;
 const filename = files[platform];
-const url = `https://github.com/Blobu/R.N.Revenge/releases/latest/download/${encodeURIComponent(filename)}`;
-const downloadLink = document.getElementById("download-link");
-const status = document.getElementById("download-status");
-downloadLink.href = url;
 
-// Attempt the download on page load without navigating away from the tutorial.
-// Browser policies / private GitHub authentication may prevent an automatic download.
-window.addEventListener("load", () => {
-  const iframe = document.createElement("iframe");
-  iframe.style.display = "none";
-  iframe.title = "Download";
-  iframe.src = url;
-  document.body.appendChild(iframe);
-  status.textContent = "Your download should start automatically. If it doesn't, use the button below.";
-});
+if (filename) {
+  const downloadUrl =
+    "https://github.com/Blobu/R.N.Revenge/releases/latest/download/"
+    + encodeURIComponent(filename);
+
+  const downloadLink = document.getElementById("download-link");
+  const status = document.getElementById("download-status");
+
+  if (downloadLink) {
+    downloadLink.href = downloadUrl;
+  }
+
+  window.addEventListener("load", () => {
+    if (status) {
+      status.textContent =
+        "Starting download... If nothing happens, click Download manually.";
+    }
+
+    // Attempt automatic download
+    const link = document.createElement("a");
+    link.href = downloadUrl;
+    link.download = filename;
+    link.style.display = "none";
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  });
+}
