@@ -68,12 +68,16 @@
 		{
 			"Name": "GooglePAD",
 			"Enabled": false
+		},
+		{
+			"Name": "BinkMedia",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
-		"Windows",
-		"Android",
 		"Linux",
-		"Mac"
+		"Windows",
+		"Mac",
+		"Android"
 	]
 }
